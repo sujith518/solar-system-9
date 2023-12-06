@@ -61,7 +61,7 @@ pipeline {
       steps {
         dir("gitops-argocd/jenkins-demo") {
           sh "git config --global user.email 'ecsudhi89@gmail.com'"
-          sh 'git remote set-url origin https://$argocd-demo@github.com/mdhack0316/gitops-argocd'
+          sh 'git remote set-url origin https://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@github.com/sujith518/gitops-argocd'
           sh 'git checkout main'
           sh 'git add -A'
           sh 'git commit -am "Updated image version for Build - $VERSION"'
