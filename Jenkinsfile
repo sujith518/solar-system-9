@@ -34,6 +34,7 @@ pipeline {
     stage('Clone/Pull Repo') {
       steps {
         script {
+          sh "rm -rf gitops-argocd*"
           if (fileExists('gitops-argocd')) {
 
             echo 'Cloned repo already exists - Pulling latest changes'
